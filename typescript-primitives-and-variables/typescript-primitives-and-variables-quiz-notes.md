@@ -5,15 +5,15 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - What is the purpose of variables?
-
+  to store data.
 - How do you **declare** a variable?
-
+  By using `const`, `let`, or `var`.
 - How do you initialize (**assign a value to**) a variable?
-
+  to initialize a variable the `=` must be used to assign a value.
 - What characters are allowed in variable names?
-
+  any letters or numbers along with $ and \_ are allowed.
 - What does it mean to say that variable names are "case sensitive"?
-
+  Variables must be spelled the same way if they ever being called or used again otherwise there might be an error.
 - What is the purpose of a string?
   for writing text into the code.
 - What is the purpose of a number?
