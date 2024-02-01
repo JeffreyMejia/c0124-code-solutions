@@ -59,6 +59,17 @@ function isOldEnoughToDrinkAndDrive(person) {
     return false;
   }
 }
+function categorizeAcidity(pH) {
+  if (pH === 7) {
+    console.log('neutral');
+  } else if (pH > 0 && pH < 7) {
+    console.log('acid');
+  } else if (pH <= 14 && pH >= 7) {
+    console.log('base');
+  } else {
+    console.log('invalid pH level.');
+  }
+}
 function introduceWarnerBro(name) {
   switch (name) {
     case 'yakko':
