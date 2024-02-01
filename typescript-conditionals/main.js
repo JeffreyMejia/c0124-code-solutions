@@ -34,9 +34,16 @@ const stew = {
   name: 'Stewie Griffon',
   age: 1,
 };
+function isOldEnoughToDrink(person) {
+  if (person.age >= 21) {
+    return true;
+  } else {
+    return false;
+  }
+}
 function isOldEnoughToDrive(person) {
   let oldEnough;
-  if (person.age > 16) {
+  if (person.age >= 16) {
     oldEnough = true;
   } else {
     oldEnough = false;
@@ -46,7 +53,9 @@ function isOldEnoughToDrive(person) {
 isOldEnoughToDrive(jeff);
 isOldEnoughToDrive(stew);
 function isOldEnoughToDrinkAndDrive(person) {
-  if (person) {
+  if (person.age >= 16 && person.age >= 21) {
+    return false;
+  } else {
     return false;
   }
 }

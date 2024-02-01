@@ -52,9 +52,17 @@ const stew: Person = {
   age: 1,
 };
 
+function isOldEnoughToDrink(person: Person): boolean {
+  if (person.age >= 21) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function isOldEnoughToDrive(person: Person): boolean {
   let oldEnough;
-  if (person.age > 16) {
+  if (person.age >= 16) {
     oldEnough = true;
   } else {
     oldEnough = false;
@@ -64,8 +72,10 @@ function isOldEnoughToDrive(person: Person): boolean {
 isOldEnoughToDrive(jeff);
 isOldEnoughToDrive(stew);
 
-function isOldEnoughToDrinkAndDrive(person: Person): any {
-  if (person) {
+function isOldEnoughToDrinkAndDrive(person: Person): boolean {
+  if (person.age >= 16 && person.age >= 21) {
+    return false;
+  } else {
     return false;
   }
 }
