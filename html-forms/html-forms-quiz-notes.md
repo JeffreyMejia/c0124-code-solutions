@@ -11,7 +11,7 @@ Answer the following questions in the provided markdown file before turning in t
 - Give three examples of `type` attribute values for HTML `<input>` elements.
   button,checkbox, and email.
 - Is an HTML `<input>` element a block element or an inline element?
-  It can be either.
+  `<input>` in an inline element.
 
 ## Notes
 
