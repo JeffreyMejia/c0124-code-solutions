@@ -11,9 +11,9 @@ Answer the following questions in the provided markdown file before turning in t
 - How is it possible for the styles of an element to be applied to its children as well without an additional CSS rule?
   Through inheritance children of the parent element inherit the computed values of the certain properties.
 - List the three selector types in order of increasing specificity.
-  ID, Class, and Type
+  Type, Class, and ID.
 - Why is using `!important` considered bad practice?
-  If a developer has good understanding of specificity and cascade then there is no need for `!important`.
+  If a developer has good understanding of specificity and cascade then there is no need for `!important`. It makes it more difficult to debug and messes with document flow.
 
 ## Notes
 
