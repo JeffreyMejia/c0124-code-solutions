@@ -1,0 +1,235 @@
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.row-1 {
+  border-bottom: solid;
+  margin-top: -1.5rem;
+  border-color: #e6e8eb;
+  border-width: thin;
+}
+
+.column-half {
+  width: calc(100% / 2);
+  display: flex;
+  align-items: center;
+}
+
+.button-top {
+  border-style: none;
+  background-color: white;
+  color: #c9c9c9;
+  cursor: pointer;
+  width: calc(100% / 4);
+  height: 30%;
+  margin-bottom: -20px;
+}
+
+.contact {
+  background-color: #294464;
+  color: white;
+  border-radius: 5%;
+  margin-bottom: -20px;
+}
+
+.blue-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: -20px;
+}
+
+/* ^ if you want to work on the top row ^
+/ below will be the "hero" picture section / */
+
+.column-full {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.woman {
+  width: 100%;
+  position: ;
+}
+
+.paragraph {
+  font-family: Avenir, sans-serif;
+  font-weight: bold;
+}
+
+.text-1 {
+  width: 50%;
+  position: absolute;
+  top: 70px;
+  left: 45px;
+  color: white;
+  z-index: 1;
+  text-align: left;
+}
+
+.overlay {
+  position: absolute;
+  background: linear-gradient(transparent, rgba(99, 94, 94, 0.75));
+  top: -2px;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+}
+
+.start-button {
+  background-color: #294464;
+  color: white;
+  border-style: none;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 5%;
+  margin-top: 1rem;
+}
+
+h1 {
+  font-family: 'Tiempos Headline', serif;
+  font-weight: lighter;
+}
+
+/* ^ above is for adjusting the woman hero portion ^
+/ below is the grey block area made up of two rows/ */
+
+.row-3 {
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.section-3 {
+  background-color: #fafafa;
+}
+
+.text-2 {
+  font-family: Avenir, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: small;
+  color: #6d6d6d;
+}
+
+h2 {
+  font-family: 'Tiempos Headline', serif;
+  text-align: center;
+  color: #6d6d6d;
+  font-weight: lighter;
+}
+
+.centers {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-2 {
+  width: 45%;
+}
+
+.row-4 {
+  margin-top: 5%;
+}
+
+/* ^ Grey block with center locations is above ^
+/ Below is the "Ready to learn" section / */
+
+.row-5 {
+  border-top: solid;
+  margin-top: 4rem;
+  border-color: #e6e8eb;
+  border-width: thin;
+}
+
+.text-3 {
+  font-family: Avenir, sans-serif;
+  font-size: small;
+  margin-top: -5%;
+}
+
+.learn {
+  display: flex;
+  justify-content: flex-start;
+  margin: 15px 0;
+}
+
+.more {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px 0;
+}
+
+/* ^above is the "Ready to learn" section^
+/below is the dark gray section/ */
+
+.row-6 {
+  background-color: #525351;
+  color: white;
+}
+
+.column-two-fourths {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(200% / 1);
+  justify-content: center;
+}
+
+.column-fourth {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(150% / 2);
+}
+
+.white-logo {
+  margin-bottom: 20px;
+  margin-top: 100px;
+  width: 25%;
+  margin-left: 40px;
+}
+
+.text-4 {
+  font-family: Avenir, sans-serif;
+  margin: 3px 0;
+  font-size: small;
+}
+
+.gray-heading {
+  margin-top: 100px;
+}
+
+.bottom {
+  margin-bottom: 100px;
+}
+
+.bb {
+  font-family: Avenir, sans-serif;
+  background-color: #525351;
+  color: white;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.info {
+  margin-left: 40px;
+}
+
+/* ^Above is the dark gray section^
+/below is the final section/ */
+
+.final-button {
+  border: none;
+  background-color: white;
+  color: #6d6d6d;
+  font-family: Avenir, sans-serif;
+  font-weight: bold;
+  font-size: small;
+}
