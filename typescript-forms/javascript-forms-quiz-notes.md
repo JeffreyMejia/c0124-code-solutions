@@ -11,7 +11,7 @@ Answer the following questions in the provided markdown file before turning in t
 - What event is fired as a user changes the value of a form control?
   the input event
 - What event is fired when a user clicks the `"submit"` button within a `<form>`?
-  The focus event
+  The submit event
 - What does the `event.preventDefault()` method do?
   prevents the event from happening.
 - What does submitting a form without `event.preventDefault()` do?

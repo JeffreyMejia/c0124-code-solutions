@@ -1,17 +1,17 @@
 function handleFocus(event: Event): void {
   console.log('The focus event has fired');
-  const eventTarget = event.target as HTMLElement | HTMLTextAreaElement;
+  const eventTarget = event.target as HTMLInputElement | HTMLTextAreaElement;
   console.log('eventTarget.name:', eventTarget.name);
 }
 
 function handleBlur(event: Event): void {
   console.log('the blur event has fire');
-  const eventTarget = event.target as HTMLElement | HTMLTextAreaElement;
+  const eventTarget = event.target as HTMLInputElement | HTMLTextAreaElement;
   console.log('eventTarget.name:', eventTarget.name);
 }
 
 function handleInput(event: Event): void {
-  const eventTarget = event.target as HTMLElement | HTMLTextAreaElement;
+  const eventTarget = event.target as HTMLInputElement | HTMLTextAreaElement;
   console.log('eventTarget.name:', eventTarget.name);
   console.log('value of name:', eventTarget.value);
 }
