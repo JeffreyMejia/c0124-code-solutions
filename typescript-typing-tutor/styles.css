@@ -1,6 +1,6 @@
 .phrase {
   width: 900px;
-  height: 900px;
+  height: 500px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -8,7 +8,8 @@
 }
 
 .space {
-  margin: 0 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .character {

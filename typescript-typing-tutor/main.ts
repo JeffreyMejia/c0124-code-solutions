@@ -1,11 +1,13 @@
 const $character = document.querySelectorAll('span');
 if (!$character) throw new Error('$character query has failed');
+let index = 0;
+
 addEventListener('keydown', (e) => {
-  for (let i = 0; i < $character.length; i++) {
-    if (e.key === $character[i].textContent) {
-      $character[i].className = 'correct';
-    } else if (e.key !== $character[i].textContent) {
-      $character[i].className = 'incorrect';
-    }
+  if (e.key === $character[index].textContent) {
+    $character[index].className = 'correct';
+    $character[index + 1].className = 'default';
+    index++;
+  } else {
+    $character[index].className = 'incorrect';
   }
 });
