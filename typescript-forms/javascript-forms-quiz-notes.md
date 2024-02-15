@@ -17,9 +17,9 @@ Answer the following questions in the provided markdown file before turning in t
 - What does submitting a form without `event.preventDefault()` do?
   reloads the page with an empty form
 - What property of a form element object contains all of the form's controls.
-
+  the `.elements` property
 - What property of a form control object gets and sets its value?
-
+  the `.value` property
 - What is one risk of writing a lot of code without checking to see if it works so far?
   You may not see where the error occurs especially if you have multiple errors.
 - What is an advantage of having your console open when writing a JavaScript program?
