@@ -14,4 +14,5 @@ $contactForm.addEventListener('submit', (event: Event) => {
     message: $formElements.message.value,
   };
   console.log('message data:', obj);
+  $contactForm.reset();
 });

@@ -25,7 +25,7 @@ if (!$userMessage || !$userName || !$userEmail) {
 }
 
 $userMessage.addEventListener('focus', handleFocus);
-$userMessage.addEventListener('blue', handleBlur);
+$userMessage.addEventListener('blur', handleBlur);
 $userMessage.addEventListener('keydown', handleInput);
 
 $userName.addEventListener('focus', handleFocus);

@@ -21,7 +21,7 @@ if (!$userMessage || !$userName || !$userEmail) {
   throw new Error('$form, $userName, or $userEmail query failed');
 }
 $userMessage.addEventListener('focus', handleFocus);
-$userMessage.addEventListener('blue', handleBlur);
+$userMessage.addEventListener('blur', handleBlur);
 $userMessage.addEventListener('keydown', handleInput);
 $userName.addEventListener('focus', handleFocus);
 $userName.addEventListener('blur', handleBlur);
