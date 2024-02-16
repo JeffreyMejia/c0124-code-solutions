@@ -5,7 +5,6 @@ const $view = document.querySelectorAll('.view');
 if (!$tabContainer || !$tab || !$view) {
   throw new Error('$tabContainer, $tab, or $view query has failed');
 }
-
 $tabContainer.addEventListener('click', (event: Event) => {
   const $eventTarget = event.target as HTMLDivElement;
   if ($eventTarget.matches('.tab')) {
