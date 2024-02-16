@@ -6,8 +6,10 @@ if (!$hotButton) throw new Error('The $hotButton query failed');
 
 $hotButton?.addEventListener('click', () => {
   timesClicked++;
+
   if (!$hotButton || !$clickCount)
     throw new Error('The $hotButton or $clickCount query failed');
+
   $clickCount.textContent = timesClicked;
   if (timesClicked < 4) {
     $hotButton.className = 'hot-button cold';
