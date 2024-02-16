@@ -1,6 +1,6 @@
 const $hotButton = document.querySelector('.hot-button');
 const $clickCount = document.querySelector('.click-count');
-let timesClicked: any = 0;
+let timesClicked: number = 0;
 
 if (!$hotButton) throw new Error('The $hotButton query failed');
 
