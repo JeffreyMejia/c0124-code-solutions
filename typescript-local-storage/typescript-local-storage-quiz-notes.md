@@ -9,8 +9,9 @@ Answer the following questions in the provided markdown file before turning in t
 - How do you retrieve data from `localStorage`?
   With the getItem method of the local storage object.
 - What data type can `localStorage` save in the browser?
-
+  local storage saves strings
 - When does the `'beforeunload'` event fire on the `window` object?
+  when the current window, contained document, and associated resource are aobut to be unloaded.
 
 ## Notes
 
