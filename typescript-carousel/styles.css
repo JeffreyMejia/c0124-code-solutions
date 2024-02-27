@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .container {
   width: 412px;
   margin: 0 auto;
@@ -5,7 +9,6 @@
 
 .row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -16,6 +19,5 @@
 
 .pokemon-list {
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
 }
