@@ -19,5 +19,5 @@ console.log(filtered);
 function noD(string) {
   return !string.includes('d') && !string.includes('D');
 }
-let withoutD = names.filter(noD);
+const withoutD = names.filter(noD);
 console.log(withoutD);

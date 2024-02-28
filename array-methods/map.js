@@ -11,8 +11,8 @@ function halfPrice(number) {
 console.log(sale);
 const price = prices.map(stringArr);
 function stringArr(number) {
-  let newString = number.toString();
-  let result = '$' + newString;
+  const newString = number.toString();
+  const result = '$' + newString;
   return result;
 }
 console.log(price);
