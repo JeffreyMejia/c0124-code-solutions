@@ -5,14 +5,30 @@ const $next = document.querySelector('.next-arrow');
 if (!$next) throw new Error('$next query has failed');
 const $image = document.querySelectorAll('.pokemon');
 if (!$image) throw new Error('$image query has failed');
-// const $progressDots = document.querySelectorAll('.dot');
-// const $li = document.querySelectorAll('li')
-// let count = 0
-// function carousel():void {
-//  for (let i = 0; i< $li.length; i++) {
-//   if (i = count) {
-//     count++
-//   }
-//  }
-// }
-// $next.addEventListener('click', )
+const $progressDots = document.querySelectorAll('.dot');
+let clickCounter = 0;
+function carousel() {
+  for (let i = 0; i < $image.length; i++) {
+    if (i === clickCounter) {
+      $image[i].setAttribute('class', 'pokemon hidden');
+      $image[i + 1].setAttribute('class', 'pokemon');
+      clickCounter++;
+      dotToggle();
+    }
+  }
+  if (clickCounter >= 5) {
+    clickCounter = 0;
+  }
+}
+$next.addEventListener('click', carousel);
+function dotToggle() {
+  for (let i = 0; i < $progressDots.length; i++) {
+    if (i === clickCounter) {
+      $progressDots[i].setAttribute('class', 'fa-solid fa-circle dot');
+    } else {
+      $progressDots.forEach((element) =>
+        element.setAttribute('class', 'fa-regular fa-circle dot')
+      );
+    }
+  }
+}
