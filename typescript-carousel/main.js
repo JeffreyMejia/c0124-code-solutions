@@ -4,23 +4,45 @@ if (!$previous) throw new Error('$previous query has failed');
 const $next = document.querySelector('.next-arrow');
 if (!$next) throw new Error('$next query has failed');
 const $image = document.querySelectorAll('.pokemon');
-if (!$image) throw new Error('$image query has failed');
 const $progressDots = document.querySelectorAll('.dot');
 let clickCounter = 0;
-function carousel() {
+function carouselRight() {
+  if (clickCounter >= 4) {
+    clickCounter = 0;
+    $image[0].setAttribute('class', 'pokemon active');
+    $image[4].setAttribute('class', 'pokemon hidden');
+    return 0;
+  }
+  clickCounter++;
   for (let i = 0; i < $image.length; i++) {
     if (i === clickCounter) {
-      $image[i].setAttribute('class', 'pokemon hidden');
-      $image[i + 1].setAttribute('class', 'pokemon');
-      clickCounter++;
+      $image[i].setAttribute('class', 'pokemon active');
+      $image[i - 1].setAttribute('class', 'pokemon hidden');
       dotToggle();
     }
   }
-  if (clickCounter >= 5) {
-    clickCounter = 0;
-  }
+  console.log('right:', clickCounter);
 }
-$next.addEventListener('click', carousel);
+function carouselLeft() {
+  if (clickCounter === 0) {
+    clickCounter = 4;
+    $image[4].setAttribute('class', 'pokemon active');
+    $image[0].setAttribute('class', 'pokemon hidden');
+    return 0;
+  }
+  clickCounter--;
+  for (let i = 0; i < $image.length; i++) {
+    let nextIndex = (i + 1) % $image.length;
+    if (i === clickCounter) {
+      $image[i].setAttribute('class', 'pokemon active');
+      $image[nextIndex].setAttribute('class', 'pokemon hidden');
+      dotToggle();
+    }
+  }
+  console.log('left:', clickCounter);
+}
+$previous.addEventListener('click', carouselLeft);
+$next.addEventListener('click', carouselRight);
 function dotToggle() {
   for (let i = 0; i < $progressDots.length; i++) {
     if (i === clickCounter) {
