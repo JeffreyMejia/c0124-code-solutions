@@ -1,14 +1,14 @@
 'use strict';
-function change(message) {
-  const $countdown = document.querySelector('.countdown-display');
+let number = 4;
+const $countdown = document.querySelector('.countdown-display');
+function change() {
   if (!$countdown) throw new Error('$countdown query has failed');
-  let number = $countdown.textContent;
-  if (number === '4') {
-    $countdown.textContent = '3';
-  } else if (number === '3') {
-    $countdown.textContent = '2';
-  } else if (number === '2') {
+  number--;
+  if (number > 1) {
+    $countdown.textContent = number.toString();
+  } else {
     $countdown.textContent = '~Earth Beeeelooowww Us~';
+    clearInterval(interval);
   }
 }
-setInterval(change, 1000);
+const interval = setInterval(change, 1000);
