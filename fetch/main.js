@@ -6,7 +6,7 @@ async function logUsers() {
       throw new Error('Network response was not OK');
     }
     const users = await response.json();
-    return console.log(users);
+    console.log(users);
   } catch (error) {
     console.error('There was a problem with your fetch:', error);
   }
