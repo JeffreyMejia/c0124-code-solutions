@@ -36,7 +36,7 @@ export function App() {
       <ImageContainer imageSrc={imageSrc[index]} />
       <ImageCaption imageCap={imageCap[index]} />
       <ImageDescription imageDescrip={imageDescrip[index]} />
-      <ButtonContainer buttonText={buttonText} handleClick={handleClick} />
+      <ButtonContainer buttonText={buttonText} onButtonClick={handleClick} />
     </>
   );
 }
