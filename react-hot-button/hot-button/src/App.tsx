@@ -1,4 +1,4 @@
-import { HotButton } from './hotButton';
+import { HotButton } from './HotButton';
 import './App.css';
 import './hotButton.css';
 
