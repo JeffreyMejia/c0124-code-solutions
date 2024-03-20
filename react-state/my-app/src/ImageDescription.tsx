@@ -8,7 +8,11 @@ export function ImageDescription({ imageDescrip }: Props) {
   const [index, setIndex] = useState(0);
 
   function handleClick() {
-    setIndex(index + 1);
+    if (index >= imageDescrip.length - 1) {
+      setIndex(0);
+    } else {
+      setIndex(index + 1);
+    }
   }
 
   const des = imageDescrip[index];

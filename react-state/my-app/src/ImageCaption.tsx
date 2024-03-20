@@ -8,7 +8,11 @@ export function ImageCaption({ imageCap }: Props) {
   const [index, setIndex] = useState(0);
 
   function handleClick() {
-    setIndex(index + 1);
+    if (index >= imageCap.length - 1) {
+      setIndex(0);
+    } else {
+      setIndex(index + 1);
+    }
   }
 
   const cap = imageCap[index];
