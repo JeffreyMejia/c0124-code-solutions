@@ -1,13 +1,9 @@
-import { Stopwatch } from './stopwatch';
+import { StopWatch } from './StopWatch';
 import './stopwatch.css';
 import './App.css';
 
 function App() {
-  return (
-    <>
-      <Stopwatch />
-    </>
-  );
+  return <StopWatch />;
 }
 
 export default App;

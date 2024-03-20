@@ -3,7 +3,7 @@ import './stopwatch.css';
 import { FaPlay } from 'react-icons/fa';
 import { FaPause } from 'react-icons/fa';
 
-export function Stopwatch() {
+export function StopWatch() {
   const [second, setSecond] = useState(0);
   const [intervalId, setintervalId] = useState<NodeJS.Timeout>();
 
