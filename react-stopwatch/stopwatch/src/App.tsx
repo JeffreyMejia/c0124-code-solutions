@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <>
-      <Stopwatch playClass="play active" pauseClass="pause" />
+      <Stopwatch />
     </>
   );
 }
