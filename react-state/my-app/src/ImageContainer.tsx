@@ -9,7 +9,11 @@ export function ImageContainer({ imageSrc }: Props) {
   const [index, setIndex] = useState(0);
 
   function handleClick() {
-    setIndex(index + 1);
+    if (index >= imageSrc.length - 1) {
+      setIndex(0);
+    } else {
+      setIndex(index + 1);
+    }
   }
   const image = imageSrc[index];
   return (
