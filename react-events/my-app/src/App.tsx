@@ -20,11 +20,7 @@ export function App() {
   const [index, setIndex] = useState(0);
 
   function handleClick(): void {
-    if (
-      index >= imageCap.length - 1 &&
-      imageSrc.length - 1 &&
-      imageDescrip.length - 1
-    ) {
+    if (index >= imageCap.length - 1) {
       setIndex(0);
     } else {
       setIndex(index + 1);
