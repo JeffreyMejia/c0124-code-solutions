@@ -1,5 +1,7 @@
 import './ValidatedInput.css';
 import { useState } from 'react';
+import { FaX } from 'react-icons/fa6';
+import { FaCheck } from 'react-icons/fa6';
 
 export function ValidatedInput() {
   const [pass, setPass] = useState('');
@@ -19,13 +21,20 @@ export function ValidatedInput() {
           Password
         </label>
       </div>
-      <input
-        value={pass}
-        onChange={(e) => setPass(e.target.value)}
-        id="password"
-        type="password"
-        required
-      />
+      <span className="inline">
+        <input
+          value={pass}
+          onChange={(e) => setPass(e.target.value)}
+          id="password"
+          type="password"
+          required
+        />
+        {pass.length >= 8 ? (
+          <FaCheck className="check"></FaCheck>
+        ) : (
+          <FaX className="x"></FaX>
+        )}
+      </span>
       <p className="input-message">{text}</p>
     </>
   );
