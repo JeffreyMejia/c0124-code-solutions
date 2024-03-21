@@ -7,11 +7,7 @@ export function ToggleSwitch() {
   let text = '';
 
   function handleClick() {
-    if (isOn === false) {
-      setOnOff(true);
-    } else {
-      setOnOff(false);
-    }
+    setOnOff(!isOn);
   }
 
   if (isOn === true) {
