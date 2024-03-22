@@ -17,11 +17,19 @@ export function RegistrationFormControlled() {
       <form onSubmit={handleSubmit}>
         <label>
           Username
-          <input onChange={(e) => setUsername(e.target.value)} type="text" />
+          <input
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            type="text"
+          />
         </label>
         <label>
           Password
-          <input onChange={(e) => setPass(e.target.value)} type="password" />
+          <input
+            value={pass}
+            onChange={(e) => setPass(e.target.value)}
+            type="password"
+          />
         </label>
         <div>
           <button type="submit" className="SignUp">
