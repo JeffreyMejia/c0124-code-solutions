@@ -7,8 +7,9 @@ Answer the following questions in the provided markdown file before turning in t
 - What are the phases in the React design process?
   Layout, followed by state, then finally events
 - How does data flow in React?
-
+  Through parent components down to the children.
 - How can children components modify state in their parents?
+  By lifting state or using props
 
 ## Notes
 

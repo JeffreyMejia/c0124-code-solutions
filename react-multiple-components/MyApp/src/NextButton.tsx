@@ -1,7 +1,10 @@
-export function NextButton() {
+type Props = {
+  next: () => void;
+};
+export function NextButton({ next }: Props) {
   return (
     <div>
-      <button>Next</button>
+      <button onClick={next}>Next</button>
     </div>
   );
 }

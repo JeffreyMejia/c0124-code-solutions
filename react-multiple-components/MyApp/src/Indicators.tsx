@@ -1,9 +1,10 @@
 type Props = {
   current: number;
   count: number;
+  thisIsCurrent: (current: number) => void;
 };
 
-export function Indicators({ current, count }: Props) {
+export function Indicators({ current, count, thisIsCurrent }: Props) {
   const arr = [];
   for (let i = 0; i < count; i++) {
     let text;
@@ -11,7 +12,7 @@ export function Indicators({ current, count }: Props) {
       text = 'active';
     }
     arr.push(
-      <button key={i} className={text}>
+      <button onClick={() => thisIsCurrent(i)} key={i} className={text}>
         {i}
       </button>
     );
