@@ -1,3 +1,7 @@
-export function Banner() {
-  return <h1>This is the Banner component</h1>;
+type Props = {
+  animal: string;
+};
+
+export function Banner({ animal }: Props) {
+  return <h1>{animal}</h1>;
 }

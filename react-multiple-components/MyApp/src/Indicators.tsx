@@ -1,12 +1,20 @@
-export function Indicators() {
-  return (
-    <>
-      <button>0</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
-      <button>5</button>
-    </>
-  );
+type Props = {
+  current: number;
+  count: number;
+};
+
+export function Indicators({ current, count }: Props) {
+  const arr = [];
+  for (let i = 0; i < count; i++) {
+    let text;
+    if (current === i) {
+      text = 'active';
+    }
+    arr.push(
+      <button key={i} className={text}>
+        {i}
+      </button>
+    );
+  }
+  return arr;
 }

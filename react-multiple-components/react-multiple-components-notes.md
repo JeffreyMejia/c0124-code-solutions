@@ -5,7 +5,7 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - What are the phases in the React design process?
-
+  Layout, followed by state, then finally events
 - How does data flow in React?
 
 - How can children components modify state in their parents?

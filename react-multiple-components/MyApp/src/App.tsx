@@ -1,25 +1,14 @@
-import { Banner } from './Banner';
-import { PreviousButton } from './PreviousButton';
-import { Indicators } from './Indicators';
-import { NextButton } from './NextButton';
+import { RotatingBanner } from './RotatingBanner';
 import './App.css';
-
-// const items = [
-//   'Aardvark',
-//   'Bengal',
-//   'Caterpillar',
-//   'Dromedary',
-//   'Elephant',
-//   'Ferret',
-// ];
+const animals = [
+  'Aardvark',
+  'Bengal',
+  'Caterpillar',
+  'Dromedary',
+  'Elephant',
+  'Ferret',
+];
 
 export default function App() {
-  return (
-    <>
-      <Banner />
-      <PreviousButton />
-      <Indicators />
-      <NextButton />
-    </>
-  );
+  return <RotatingBanner animals={animals} />;
 }
