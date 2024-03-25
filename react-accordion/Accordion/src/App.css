@@ -1,0 +1,20 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.topics-list {
+  list-style: none;
+}
+
+.title {
+  border: 3px solid;
+  background-color: bisque;
+  color: black;
+}
+
+.content {
+  border: 3px solid;
+}
