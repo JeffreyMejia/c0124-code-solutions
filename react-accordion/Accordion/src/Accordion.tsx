@@ -16,13 +16,19 @@ export function Accordion({ topics }: Props) {
 
   function handleCurrent(topicIndex: number) {
     if (topicIndex === activeIndex) {
-      setActiveIndex(3);
+      setActiveIndex(0);
     } else {
       setActiveIndex(topicIndex);
     }
   }
 
+  const topicCards = topics.map((topic) => (
+    <TopicCard isActive={activeIndex} onShow={handleCurrent} topic={topic} />
+  ));
+
   return (
-    <TopicCard isActive={activeIndex} onShow={handleCurrent} topics={topics} />
+    <div>
+      <ul className="topics-list">{topicCards}</ul>
+    </div>
   );
 }
