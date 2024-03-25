@@ -20,7 +20,7 @@ const quotes = [
 export function Search() {
   const [search, setSearch] = useState('');
   const searchFilter = quotes.filter((quote) =>
-    quote.toLocaleLowerCase().includes(search)
+    quote.toLocaleLowerCase().includes(search.toLocaleLowerCase())
   );
 
   return (
