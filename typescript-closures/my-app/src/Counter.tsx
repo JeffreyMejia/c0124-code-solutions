@@ -2,14 +2,16 @@ import { useCallback, useEffect, useState } from 'react';
 
 export function Counter() {
   const [counter, setCounter] = useState(0);
-  useEffect(() => {
-    stuff;
-    setCounter((prev) => prev + 1);
-  }, []);
 
-  const stuff = useCallback(function getData() {
+  const getData = useCallback(() => {
     // fetch data
     return { foo: 'bar' };
   }, []);
+
+  useEffect(() => {
+    getData();
+    setCounter((prev) => prev + 1);
+  }, [getData]);
+
   return <div>Fetching {counter} times</div>;
 }
