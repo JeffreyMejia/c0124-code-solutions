@@ -19,6 +19,7 @@ export function List() {
         setIsLoading(false);
       } catch (error) {
         setError(error);
+        setIsLoading(false);
       }
     }
     read();
