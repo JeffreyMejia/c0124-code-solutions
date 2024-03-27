@@ -16,7 +16,7 @@ export function Carousel({ images }: Props) {
     return () => {
       clearInterval(intervalId);
     };
-  });
+  }, [handleNext]);
 
   function handleClick(student: number) {
     setActiveIndex(student);
