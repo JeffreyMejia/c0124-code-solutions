@@ -20,7 +20,7 @@ export function Header() {
           </ul>
         </div>
       </nav>
-      {<Outlet />}
+      <Outlet />
     </div>
   );
 }
