@@ -46,3 +46,10 @@
 .app-drawer.is-open {
   width: 16rem;
 }
+
+.link:hover {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}

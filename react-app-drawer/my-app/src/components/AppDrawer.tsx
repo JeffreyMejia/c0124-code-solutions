@@ -35,7 +35,7 @@ export function AppDrawer({ menuItems }: Props) {
           <ul className="navbar-nav mr-auto">
             {menuItems.map((menu) => (
               <li key={menu.name} className="nav-item nav-link">
-                <Link to={menu.path} className="title">
+                <Link to={menu.path} className="title link">
                   <img className="icon" src={menu.iconUrl} />
                   {open === false && menu.name}
                 </Link>

@@ -13,7 +13,7 @@ const menuItems = [
 export function App() {
   return (
     <Routes>
-      <Route path="/" element={<AppDrawer onClick={} menuItems={menuItems} />}>
+      <Route path="/" element={<AppDrawer menuItems={menuItems} />}>
         <Route index element={<Catalog />} />
         <Route path="details/:productId" element={<ProductDetails />} />
         <Route path="about" element={<About />} />
