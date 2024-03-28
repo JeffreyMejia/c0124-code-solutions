@@ -8,15 +8,13 @@ import { NotFound } from './NotFound';
 
 export default function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<NavBar />}>
-          <Route index element={<Catalog />} />
-          <Route path="about" element={<About />} />
-          <Route path="detail/:productId" element={<ProductDetails />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<NavBar />}>
+        <Route index element={<Catalog />} />
+        <Route path="about" element={<About />} />
+        <Route path="detail/:productId" element={<ProductDetails />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }
