@@ -22,15 +22,11 @@ export function AppDrawer({ menuItems }: Props) {
     text = '';
   }
 
-  function handleOpen() {
-    open === true ? setOpen(false) : setOpen(true);
-  }
-
   return (
     <div className="d-flex vw-100 nav">
       <nav className={`shadow-sm app-drawer ${text}`}>
         <div className="navbar-collapse drawer">
-          <FaBars onClick={handleOpen} className="bars"></FaBars>
+          <FaBars onClick={() => setOpen(!open)} className="bars"></FaBars>
           {open === false && <h3 className="header">Hylian Shopping</h3>}
           <ul className="navbar-nav mr-auto">
             {menuItems.map((menu) => (
