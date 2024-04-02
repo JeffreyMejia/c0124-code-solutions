@@ -11,16 +11,17 @@ Answer the following questions in the provided markdown file before turning in t
 - How do you add multiple rows to a SQL table at once?
   when using the values keyword enter the values for one row followed by the values for the second row and so on and so forth.
 - How do you update rows in a database table?
-
+  with the update keyword
 - How do you delete rows from a database table?
-
+  with the delete keyword
 - Why is it important to include a `where` clause in your `update` and `delete` statements?
-
+  To update or delete specific entries and not entire attributes or databases
 - How do you accidentally delete or update all rows in a table?
-
+  when `where` is not included
 - How do you get back the modified row without a separate `select` statement?
-
+  with the return clause.
 - Why did you get an error when trying to delete certain films?
+  It conflicted with a previous update.
 
 ## Notes
 
