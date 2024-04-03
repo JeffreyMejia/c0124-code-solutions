@@ -9,9 +9,9 @@ Answer the following questions in the provided markdown file before turning in t
 - How does Express fit into a full-stack web application?
   It is part of the backend development. It is a Node plugin to help with server side work.
 - How do you add `express` to your package dependencies?
-
+  npm install express
 - What Express application method starts the server and binds it to a network `port`?
-
+  the listen method
 - What is a network `port`?
   a port is where network connections start and end. Each port handle a specific process or service and have different numbers to differentiate the type of traffic.
 
