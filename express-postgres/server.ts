@@ -15,7 +15,8 @@ const app = express();
 app.get('/api/films', async (req, res, next) => {
   try {
     const sql = `
-     select "title", "filmId",
+     select "title",
+     "filmId"
      from "films"
      order by "replacementCost" desc
     `;
@@ -51,8 +52,8 @@ app.get('/api/film', async (req, res, next) => {
 });
 
 app.put('/api/film', async (req, res, next) => {
-  const { filmId } = req.query;
-  const { title } = req.query;
+  const { filmId, title } = req.query;
+
   if (filmId || title === undefined) {
     throw new ClientError(400, 'this field is required');
   }
@@ -65,7 +66,7 @@ app.put('/api/film', async (req, res, next) => {
     `;
     const params = [title as string, filmId as string];
     const result = await db.query(sql, params);
-    const film = result.rows[0];
+    const [film] = result.rows;
     if (!film) {
       throw new ClientError(404, `film ${filmId} not found`);
     } else {
