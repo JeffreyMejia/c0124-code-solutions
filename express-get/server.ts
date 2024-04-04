@@ -32,8 +32,8 @@ app.get('/api/films', async (req, res, next) => {
 app.get('/api/films/:filmId', async (req, res, next) => {
   try {
     const { filmId } = req.params;
-    if (Number.isInteger(filmId)) {
-      throw new ClientError(400, 'filmId is required!');
+    if (!Number.isInteger(+filmId)) {
+      throw new ClientError(400, 'filmId must be an integer!');
     }
     const sql = `
     select "filmId", "title", "replacementCost"
