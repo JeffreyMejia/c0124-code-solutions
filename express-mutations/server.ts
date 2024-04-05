@@ -38,6 +38,8 @@ app.get('/api/actors/:actorId', async (req, res, next) => {
 app.post('/api/actors', async (req, res, next) => {
   try {
     const { fName, lName } = req.body;
+    if (!fName) throw new ClientError(400, 'first name is required.');
+    if (!lName) throw new ClientError(400, 'last name is required.');
     const sql = `
      insert into "actors" ("firstName", "lastName")
      values ($1, $2)
@@ -46,9 +48,6 @@ app.post('/api/actors', async (req, res, next) => {
     const values = [fName, lName];
     const result = await db.query(sql, values);
     const newActor = result.rows[0];
-    if (!newActor) {
-      throw new ClientError(400, 'something went wrong with your request');
-    }
     res.status(201).json(newActor);
   } catch (error) {
     next(error);
@@ -62,6 +61,8 @@ app.put('/api/actors/:actorId', async (req, res, next) => {
     if (!Number.isInteger(+actorId)) {
       throw new ClientError(400, 'actorId must be an integer!');
     }
+    if (!firstName) throw new ClientError(400, 'first name is required.');
+    if (!lastName) throw new ClientError(400, 'last name is required.');
     const sql = `
     update "actors"
     set "firstName" = $1, "lastName" = $2
@@ -97,7 +98,7 @@ app.delete('/api/actors/:actorId', async (req, res, next) => {
     if (!deletedActor) {
       throw new ClientError(404, `error ${actorId} was not found!`);
     }
-    res.sendStatus(204);
+    res.sendStatus(204).json();
   } catch (error) {
     next(error);
   }
