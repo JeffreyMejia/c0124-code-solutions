@@ -18,7 +18,7 @@ export function UserDetails({ userId, onCancel }: Props) {
         const readUser = await fetch(
           `https://jsonplaceholder.typicode.com/users/${userId}`
         );
-        if (!readUser) throw new Error('network response was not Ok');
+        if (!readUser.ok) throw new Error('network response was not Ok');
         const aUser = await readUser.json();
         setUser(aUser);
       } catch (error) {

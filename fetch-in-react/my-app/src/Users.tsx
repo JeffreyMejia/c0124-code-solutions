@@ -24,7 +24,7 @@ export function Users() {
         const readUsers = await fetch(
           'https://jsonplaceholder.typicode.com/users'
         );
-        if (!readUsers) throw new Error('network response was not Ok');
+        if (!readUsers.ok) throw new Error('network response was not Ok');
         const allUsers = await readUsers.json();
         setUsers(allUsers);
       } catch (error) {
